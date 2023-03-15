@@ -1,22 +1,27 @@
-import logo from './logo.svg'
+import { useId } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { add, update, remove } from './store/todoSlice'
 import './App.css'
 
 function App() {
+  const key = useId()
+  const todos = useSelector((state) => state.todos.list)
+  const dispatch = useDispatch()
+
+  // console.log('TODOS -> ', todos)
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>Using Redux</p>
+
+        <div>
+          <ul>
+            {todos?.map((todo) => {
+              return <li key={key}>{todo?.title}</li>
+            })}
+          </ul>
+        </div>
       </header>
     </div>
   )
