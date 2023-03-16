@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(var(--font-size) + 1vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--md-spacing);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: var(--md-spacing) 0;
+}
+
+label {
+  font-size: var(--font-size);
+  margin-right: var(--xs-spacing);
+}
+
+input {
+  padding: calc(var(--xs-spacing) + 2px);
+}
+
+ul {
+  width: var(--max-width);
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: var(--xs-spacing) 0;
+}
+
+.item li {
+  margin-right: var(--sm-spacing);
+  padding: var(--xs-spacing);
+}
+
+.item li:hover {
+  cursor: pointer;
+  color: var(--hover-color);
 }

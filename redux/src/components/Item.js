@@ -15,6 +15,7 @@ const Item = ({ title, onChange, handleRemove }) => {
 
   return isEditing ? (
     <input
+      data-edit="input-edit "
       autoFocus
       id="update-todo"
       type="text"
@@ -22,12 +23,12 @@ const Item = ({ title, onChange, handleRemove }) => {
       onChange={onChange}
     />
   ) : (
-    <>
+    <div className="item">
       <li onClick={handleClick}>{title}</li>
       <button id="remove-todo" onClick={handleRemove}>
-        Remove ToDo
+        Remove
       </button>
-    </>
+    </div>
   )
 }
 

@@ -18,26 +18,26 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <div>
       <header className="App-header">
-        <p>Using Redux</p>
+        <h1>Using Redux</h1>
+      </header>
 
-        <div>
-          <ul>
-            {todos?.map((todo, index) => {
-              return (
-                <Item
-                  key={key + index}
-                  title={todo?.title}
-                  onChange={(e) =>
-                    dispatch(update({ id: todo?.id, title: e.target.value }))
-                  }
-                  handleRemove={() => dispatch(remove(todo?.id))}
-                />
-              )
-            })}
-          </ul>
-        </div>
+      <main>
+        <ul>
+          {todos?.map((todo, index) => {
+            return (
+              <Item
+                key={key + index}
+                title={todo?.title}
+                onChange={(e) =>
+                  dispatch(update({ id: todo?.id, title: e.target.value }))
+                }
+                handleRemove={() => dispatch(remove(todo?.id))}
+              />
+            )
+          })}
+        </ul>
 
         <form
           onSubmit={(e) => {
@@ -49,7 +49,7 @@ function App() {
           <label htmlFor="add-todo">Add Todo</label>
           <input id="add-todo" type="text" ref={inputRef} defaultValue="" />
         </form>
-      </header>
+      </main>
     </div>
   )
 }
