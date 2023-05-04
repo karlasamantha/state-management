@@ -15,4 +15,5 @@ For each option a TO DO app will be implemented, with the following capabilities
 - [`useReducer`](./useReducer/)
 - [Redux](./redux/)
 - [Jotai](./jotai/)
-- Mobx
+- [Mobx]()
+- [Zustand](./zustand/)

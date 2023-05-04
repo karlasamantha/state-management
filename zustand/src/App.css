@@ -1,0 +1,54 @@
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--font-size) + 1vmin);
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--md-spacing);
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: var(--md-spacing) 0;
+}
+
+label {
+  font-size: var(--font-size);
+  margin-right: var(--xs-spacing);
+}
+
+input {
+  padding: calc(var(--xs-spacing) + 2px);
+}
+
+ul {
+  width: var(--max-width);
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: var(--xs-spacing) 0;
+}
+
+.item li {
+  margin-right: var(--sm-spacing);
+  padding: var(--xs-spacing);
+}
+
+.item li:hover {
+  cursor: pointer;
+  color: var(--hover-color);
+}
